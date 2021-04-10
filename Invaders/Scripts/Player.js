@@ -21,7 +21,29 @@ function drawPlayer()
     if (controller.right) {
         cannon.x += cannon.speed;
     }
-    
+
     // draw the player's new position
     context.drawImage(player_cannon, cannon.x, cannon.y, cannon.w, cannon.h);
+}
+
+// cannon-life object & counter
+let life = document.createElement("img");
+life.src = "../Invaders/Assets/cannon.png";
+
+/* Update the amount of remaining lives */
+function drawLives() {
+    switch (cannon.lives) {
+        case 3:
+            context.drawImage(life, 125, 665, cannon.w-20, cannon.h-10);
+            context.drawImage(life, 225, 665, cannon.w-20, cannon.h-10);
+            context.drawImage(life, 325, 665, cannon.w-20, cannon.h-10);
+            break;
+        case 2:
+            context.drawImage(life, 125, 665, cannon.w-20, cannon.h-10);
+            context.drawImage(life, 225, 665, cannon.w-20, cannon.h-10);
+            break;
+        case 1:
+            context.drawImage(life, 125, 665, cannon.w-20, cannon.h-10);
+            break;
+    }
 }

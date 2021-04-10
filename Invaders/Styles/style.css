@@ -14,3 +14,12 @@ body {
     background-color: black;
     box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.2);
 }
+
+#game_content {
+    color: whitesmoke;
+}
+
+#lives {
+    position: relative;
+    bottom: 75px;
+}
