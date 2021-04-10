@@ -12,3 +12,7 @@ function drawLevel() {
 
     // Todo: 
 }
+
+function drawEnemies() {
+    
+}
