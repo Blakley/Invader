@@ -1,10 +1,9 @@
+let menu_screen = false;
 
 let controller = {
     left: false,
     right: false,
-    up: false,
     pause: false,
-    menu: false,
     keyListener: function(event) {
         let state;
         if (event.type == "keydown")                       
@@ -12,19 +11,17 @@ let controller = {
         else
             state = false;
 
-        switch(event.keyCode) {                 
-            case 65:    
-                if (controller.menu == false) {
+        if (menu_screen == false) {
+            switch(event.keyCode) {                 
+                case 65:    
                     controller.left = state;   
-                    console.log('moving left');
-                }
-                break;
-            case 68: 
-                if (controller.menu == false) {
+                    console.log('moving left');   
+                    break;
+                case 68: 
                     controller.right = state;
                     console.log('moving right');
-                }
-                break; 
+                    break; 
+            }
         }
     }
 };

@@ -1,28 +1,27 @@
-/* Test player object types */
-let player = {
-    x: 625,
-    y: 625,
-    r: 15,
-    speed: 5.0,
-    color: 'blue',
+
+/* cannon-player object */
+let player_cannon = document.createElement("img");
+player_cannon.src = "../Invaders/Assets/cannon.png";
+
+let cannon = {
+    h: 40,
+    w: 70,
+    x: 600,
+    y: 600,
+    speed: 5.5,
     lives: 3
 };
 
-/* Update the test player's position */
-function updatePlayer() 
+/* Update the player's position */
+function drawPlayer() 
 {
     if (controller.left) {
-        player.x -= player.speed;
+        cannon.x -= cannon.speed;
     }
     if (controller.right) {
-        player.x += player.speed;
+        cannon.x += cannon.speed;
     }
-
+    
     // draw the player's new position
-    context.beginPath();
-    context.arc(player.x, player.y, player.r, 0, 2 * Math.PI);
-    context.strokeStyle = player.color;
-    context.stroke();
-    context.fillStyle = player.color;
-    context.fill();
+    context.drawImage(player_cannon, cannon.x, cannon.y, cannon.w, cannon.h);
 }

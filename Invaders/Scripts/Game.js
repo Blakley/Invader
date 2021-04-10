@@ -24,8 +24,8 @@ function loop() {
     context.clearRect(0, 0, screen.width, screen.height);
 
     // tests
-    drawLine();
-    updatePlayer();
+    drawLevel();
+    drawPlayer();
 
     frame = window.requestAnimationFrame(loop);
 }
