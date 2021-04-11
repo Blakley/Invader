@@ -13,6 +13,7 @@ function drawLevel() {
     // Todo: 
 }
 
+/* Draw the current enemies */
 function drawEnemies() {
-    
+
 }

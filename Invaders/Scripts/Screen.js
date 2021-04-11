@@ -25,6 +25,7 @@ function loop() {
     drawLevel();
     drawLives();
     drawPlayer();
+    drawEnemies();
     window.requestAnimationFrame(loop);
 }
 
