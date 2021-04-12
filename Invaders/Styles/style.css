@@ -15,25 +15,39 @@ body {
     box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.2);
 }
 
-#game_content_1, #game_content_2, #score {
+/* game content */
+
+#game_content_1, #game_content_2 {
     position: relative;
-    color: whitesmoke;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
 }
+
+/* game_content 1 */
 
 #game_content_1 {
-    bottom: 75px;
+    color: white;
+    bottom: 80px;
     left: 25px;
 }
+
+#lives, #lives_count {
+    display:inline-block
+}
+
+/* game_content 2 */
 
 #game_content_2 {
-    bottom: 670px;
+    color: white;
+    bottom: 690px;
     padding-left: 20px;
+    left: 25px;
 }
 
-#score {
-    left: 25px;
-    bottom: 15px;
+#score_count {
+    position: relative;
+    bottom: 25px;
+    left: 20px;
 }
 
 #Debugger {

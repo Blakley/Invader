@@ -3,9 +3,7 @@ let screen;
 let context;
 window.onload = init;
 
-/* 
- * Setup the game drawing screen and settings
- */
+/* Setup the game drawing screen and settings */
 function init() {
     screen = document.createElement("canvas");
     screen.id       = 'game'; 
@@ -17,16 +15,12 @@ function init() {
     window.requestAnimationFrame(loop); // first frame
 }
 
-/* 
- * Continually draw our game objects
- */
+/* Continually draw our game objects */
 function loop() {
     context.clearRect(0, 0, screen.width, screen.height);
-    drawLine();
-    drawLives();
-    drawPlayer();
-    handleBounds();
     drawEnemies();
+    drawLevel();
+    drawPlayer();
     window.requestAnimationFrame(loop);
 }
 
