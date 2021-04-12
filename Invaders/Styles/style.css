@@ -1,13 +1,13 @@
 body {
-    background-color:#dbdbdb;
+    background-color:#ffffff;
 }
 
 #screen {
     position: relative;
     left: 300px;
     top: 100px;
-    width: 1280px;
-    height: 720px;
+    width: 800px;
+    height: 600;
     background: white;
     margin: -1px;
     border: 1px solid black;
@@ -15,11 +15,32 @@ body {
     box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.2);
 }
 
-#game_content {
+#game_content_1, #game_content_2, #score {
+    position: relative;
     color: whitesmoke;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#lives {
-    position: relative;
+#game_content_1 {
     bottom: 75px;
+    left: 25px;
+}
+
+#game_content_2 {
+    bottom: 670px;
+    padding-left: 20px;
+}
+
+#score {
+    left: 25px;
+    bottom: 15px;
+}
+
+#Debugger {
+    position: relative;
+    bottom: 95%;
+    left: 55%;
+    color: lawngreen;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

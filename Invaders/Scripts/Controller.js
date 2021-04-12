@@ -14,12 +14,10 @@ let controller = {
         if (menu_screen == false) {
             switch(event.keyCode) {                 
                 case 65:    
-                    controller.left = state;   
-                    console.log('moving left');   
+                    controller.left = state;      
                     break;
                 case 68: 
                     controller.right = state;
-                    console.log('moving right');
                     break; 
             }
         }

@@ -9,8 +9,8 @@ window.onload = init;
 function init() {
     screen = document.createElement("canvas");
     screen.id       = 'game'; 
-    screen.width    = 1280;    
-    screen.height   = 720;  
+    screen.width    = 800;    
+    screen.height   = 600;  
     context = screen.getContext('2d');
     document.getElementById("game_screen").appendChild(screen);
     $("#game_screen").show();
@@ -22,13 +22,17 @@ function init() {
  */
 function loop() {
     context.clearRect(0, 0, screen.width, screen.height);
-    drawLevel();
+    drawLine();
     drawLives();
     drawPlayer();
+    handleBounds();
     drawEnemies();
     window.requestAnimationFrame(loop);
 }
 
+/* 
+ * Handle the pause menu functionality 
+ */
 function pause() {
     /* Todo */
 }
