@@ -41,6 +41,12 @@ let enemy_obj = {
 let enemy_count = 0;
 let enemy_groups = [];
 
+/* */
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+
 /* create the enemies */
 function createEnemies(row) {
     let e_images = [];
@@ -139,6 +145,18 @@ function drawEnemies() {
             context.drawImage(curr_img, curr_obj.x, curr_obj.y, curr_obj.w, curr_obj.h);
         }
     }
+}
+
+/* selects a random enemy from the group */
+function selectEnemy() {
+    let row = getRandomInt(0, enemy_groups.length - 1);
+    /* TODO: */
+}
+
+
+/* */
+function moveEnemies() {
+
 }
 
 
