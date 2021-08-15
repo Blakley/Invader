@@ -1,10 +1,10 @@
 body {
     background-color:#ffffff;
+    font-family: 'Roboto Mono', monospace;
 }
 
 /* press-start-2p-regular - latin */
 @font-face {
-    font-family: 'Press Start 2P';
     font-style: normal;
     font-weight: 400;
     src: url('../fonts/press-start-2p-v9-latin-regular.eot'); /* IE9 Compat Modes */
@@ -33,7 +33,6 @@ body {
 
 #game_content_1, #game_content_2 {
     position: relative;
-    font-family: 'Press Start 2P';
     font-size: 25px;
 }
 
@@ -42,7 +41,7 @@ body {
 #game_content_1 {
     color: white;
     bottom: 80px;
-    left: 25px;
+    left: 20px;
 }
 
 #lives, #lives_count {
@@ -58,10 +57,14 @@ body {
     left: 25px;
 }
 
+#score {
+    font-size: 22px;
+}
+
 #score_count {
     position: relative;
     bottom: 25px;
-    left: 20px;
+    left: 2px;
 }
 
 #Debugger {
@@ -70,5 +73,4 @@ body {
     left: 55%;
     color: lawngreen;
     font-size: 25px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

@@ -1,5 +1,5 @@
 
-/* spaceship enemy */
+// spaceship enemy
 let enemy_spaceship = document.createElement("img");
 enemy_spaceship.src = "../Invaders/Assets/spaceship.png";
 let spaceship = {
@@ -41,11 +41,10 @@ let enemy_obj = {
 let enemy_count = 0;
 let enemy_groups = [];
 
-/* */
+/* Returns a random value between two numbers */
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
-
 
 /* create the enemies */
 function createEnemies(row) {
@@ -149,14 +148,24 @@ function drawEnemies() {
 
 /* selects a random enemy from the group */
 function selectEnemy() {
-    let row = getRandomInt(0, enemy_groups.length - 1);
-    /* TODO: */
+    return;
 }
 
 
-/* */
+/* handle enemy movement */
 function moveEnemies() {
-
+    for (let i = 0; i < enemy_groups.length; i++) 
+    {
+        let enemy_group = enemy_groups[i];
+        let e_images = enemy_group[0];
+        let e_objects = enemy_group[1];
+    
+        for (let i = 0; i < e_images.length; i++) {
+            let curr_img = e_images[i];
+            let curr_obj = e_objects[i];
+            curr_obj.x += 5;
+        }
+    }
 }
 
 
